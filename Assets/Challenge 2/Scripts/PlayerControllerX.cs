@@ -14,10 +14,10 @@ public class PlayerControllerX : MonoBehaviour
     }
 
     IEnumerator instantiateDog(){
-         yield return new WaitForSeconds(delayTime);
+         
          if (Input.GetKeyDown(KeyCode.Space))
         {
-           
+           yield return new WaitForSeconds(delayTime);
             Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
         }
     }
